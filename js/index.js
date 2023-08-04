@@ -7,10 +7,15 @@ let timer;
 function appStart() {
   const displayGameclear = () => {
     const div = document.createElement("div");
-    div.innerText = "CONGRATULATIONS!";
+    div.innerText = "SUCCESS!\nCONGRATULATIONS";
     div.style =
-      "display:flex; justify-content:center; align-items:center; position:absolute; top: 40vh; left: 40vw; background-color:white; width: 200px; height: 50px;";
+      "display:flex; justify-content:center; align-items:center; text-align: center; position:absolute; top: 40vh; left: 40vw; background-color:white; width: 200px; height: 50px;";
     document.body.appendChild(div);
+    window.onresize = function (e) {
+      var innerWidth = window.innerWidth;
+      if (innerWidth <= "500") div.style.display = "none";
+      else div.style.display = "block";
+    };
   };
 
   const gameclear = () => {
@@ -23,8 +28,13 @@ function appStart() {
     const div = document.createElement("div");
     div.innerText = "YOU FAILED!\nTRY AGAIN";
     div.style =
-      "display:flex; justify-content:center; align-items:center; position:absolute; top: 40vh; left: 40vw; background-color:white; width: 200px; height: 50px;";
+      "display:flex; justify-content:center; align-items:center; text-align: center; position:absolute; top: 40vh; left: 40vw; background-color:white; width: 200px; height: 50px;";
     document.body.appendChild(div);
+    window.onresize = function (e) {
+      var innerWidth = window.innerWidth;
+      if (innerWidth <= "500") div.style.display = "none";
+      else div.style.display = "block";
+    };
   };
 
   const gameover = () => {
