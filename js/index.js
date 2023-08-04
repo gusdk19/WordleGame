@@ -1,4 +1,4 @@
-const 정답 = "ADORE";
+const 정답 = "LOVER";
 
 let attempts = 0;
 let index = 0;
