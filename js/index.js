@@ -1,4 +1,4 @@
-const 정답 = "LOVER";
+const 정답 = "ADORE";
 
 let attempts = 0;
 let index = 0;
@@ -92,7 +92,7 @@ function appStart() {
     else if (index === 5) {
       if (event.key === "Enter") handleEnterKey();
       else return;
-    } else if (event.key === "Enter") handleEnterKey();
+    } else if (event.key === "Enter") alert("Please enter 5 letters");
     else if (keyCode >= 65 && keyCode <= 90) {
       thisBlock.innerText = key;
       index += 1;
